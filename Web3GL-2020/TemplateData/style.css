@@ -69,8 +69,8 @@ body {
 
 .image-left {
   cursor: pointer;
-  width: 60px;
-  height: 63px;
+  width: 80px;
+  height: 85px;
   margin-top: 15px;
   margin-left: 15px;
   transition: all 0.2 ease;
