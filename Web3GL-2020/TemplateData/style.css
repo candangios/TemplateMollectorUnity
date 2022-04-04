@@ -20,6 +20,66 @@ body {
   font-family: 'MollectorFont'; /*a name to be used later*/
   src: url('UTM God_s WordR.ttf'); /*URL to font*/
 }
+
+.wrapper-container {
+  display: flex;
+}
+
+.game-box {
+  width: 40%;
+  position: relative;
+}
+
+.left-side {
+  background-image: url(./bg-right.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 30%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.right-side {
+  background-image: url(./bg-left.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 30%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.image-right {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin-top: 15px;
+  margin-right: 15px;
+  transition: all 0.2 ease;
+}
+
+.image-right:hover {
+  transform: scale(1.1);
+}
+
+.image-left {
+  cursor: pointer;
+  width: 60px;
+  height: 63px;
+  margin-top: 15px;
+  margin-left: 15px;
+  transition: all 0.2 ease;
+}
+
+.image-left:hover {
+  transform: scale(1.1);
+}
+
 #unity-container {
   font-family: 'MollectorFont';
   width: 100%;
