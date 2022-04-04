@@ -1,0 +1,174 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html, body {
+  height: 100%;
+}
+canvas {
+  display: block;
+}
+
+body {
+  /* padding: 0; */
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'MollectorFont'; /*a name to be used later*/
+  src: url('UTM God_s WordR.ttf'); /*URL to font*/
+}
+#unity-container {
+  font-family: 'MollectorFont';
+  width: 100%;
+  height: 100%;
+}
+
+#unity-canvas {
+  width: 100%;
+  height: 100%;
+  background: {{{ BACKGROUND_COLOR }}};
+
+}
+
+#unity-webgl-logo {
+  float: left;
+  width: 204px;
+  height: 38px;
+  background: url("webgl-logo.png") no-repeat center;
+}
+
+#unity-fullscreen-button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 38px;
+  height: 38px;
+  background: url('fullscreen-button.png') no-repeat center;
+  background-size: contain;
+}
+
+#loading-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: url("BG_S1.png") no-repeat center;
+  background-size: auto 100%;
+}
+#background-cover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 504px;
+  background: url("BG_S1.png") no-repeat center;
+  background-size: 'auto';
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+#content-cover {
+  /* position: relative; */
+  width: 90%;
+  height: 446px;
+  background: url("plateGuide2x.png") no-repeat center;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#line-cover {
+  width: 90%;
+}
+#header-cover
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  width: 100%;
+}
+
+#title-cover {
+  margin-top: 6px ;
+  font-size: 34px;
+  color: rgb(242, 185, 32);
+  text-align: center;
+ 
+
+}
+#tips-cover {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: rgb(231, 226, 194);
+  line-height: 22pt;
+  text-align: center;
+  width: 390px;
+}
+#branch-cover{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 11px;
+  color: rgb(97, 82, 75);
+  text-align: center;
+  width: 390px;
+}
+#version-cover{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  color: rgb(132, 107, 96);
+  text-align: center;
+  width: 390px;
+}
+#unity-progress-bar-empty {
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("progress-bar-empty-dark.png") no-repeat center;
+  background-size: 100% 100%;
+}
+#indicator-percent-cover{
+  position:absolute;
+  top: 10px;
+  right: 0;
+  width: 37px;
+  height: 33px;
+ 
+  background: url("indicatorPercentPlate.png") no-repeat center;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+#percent-text-cover{
+  margin-left: 12px;
+  font-size: 10px;
+  color: rgb(242, 185, 32);
+}
+#unity-progress-bar-full {
+  position: relative;
+  width: 0%;
+  height: 37px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(180deg,rgb(11,183,244), rgba(25,139,241,0.21));
+}
+#unity-loading-bar {
+  position: relative;
+  width: 90%;
+  max-width: 504px;
+  margin-bottom: 30px;
+}
