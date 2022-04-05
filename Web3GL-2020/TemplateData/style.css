@@ -66,11 +66,55 @@ body {
   height: 50px;
   margin-top: 15px;
   margin-right: 15px;
-  transition: all 0.2 ease;
+  transition: 0.2 all ease;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.image-right.discord {
+  background-image: url('./socialdiscord@3x.png');
+}
+
+.image-right.tele {
+  background-image: url('./socialTele@3x.png');
+}
+
+.image-right.face {
+  background-image: url('./socialFace@3x.png');
+}
+
+.image-right.twi {
+  background-image: url('./socialTwi@3x.png');
+}
+
+.image-right.youtube {
+  background-image: url('./socialYoutube@3x.png');
+}
+
+
+.image-right.discord:hover {
+  background-image: url('./socialdiscordHover@3x.png');
+}
+
+.image-right.tele:hover {
+  background-image: url('./socialTeleHover@3x.png');
+}
+
+.image-right.face:hover {
+  background-image: url('./socialFaceHover@3x.png');
+}
+
+.image-right.twi:hover {
+  background-image: url('./socialTwiHover@3x.png');
+}
+
+.image-right.youtube:hover {
+  background-image: url('./socialYoutubeHover@3x.png');
 }
 
 .image-right:hover {
-  transform: scale(1.1);
+  transform: scale(1.3);
   
 }
 
@@ -80,11 +124,30 @@ body {
   height: 85px;
   margin-top: 15px;
   margin-left: 15px;
-  transition: all 0.2 ease;
+  transition: 0.2 all ease;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.image-left.guide {
+  background-image: url('./guideBtnCopy@3x.png');
+}
+
+.image-left.guide:hover {
+  background-image: url('./guideBtnHover2@3x.png');
+}
+
+.image-left.staking {
+  background-image: url('./guideBtnCopy3@3x.png');
+}
+
+.image-left.staking:hover {
+  background-image: url('./guideBtnHover1@3x.png');
 }
 
 .image-left:hover {
-  transform: scale(1.1);
+  transform: scale(1.4);
 }
 
 #unity-container {
