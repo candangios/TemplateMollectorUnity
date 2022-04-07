@@ -14,29 +14,22 @@
 </head>
 
 <body class="{{{ SPLASH_SCREEN_STYLE.toLowerCase() }}}">
-    <div id="unity-container" class="unity-desktop">
+
+  <div id="wrapper-container">
+    <div class="left-side">
+      <div class="left-content">
+        <a href="https://docs.mollector.com/about-mollector/introduction" target="_blank" rel="noopener noreferrer"
+          class="image-left guide"></a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="image-left staking"></a>
+
+      </div>
+
+    </div>
+    <div id="game-box">
+      <div id="unity-container" class="unity-desktop">
         <canvas id="unity-canvas"></canvas>
       </div>
-      <!-- <div id="loading-cover">
-        <div id="unity-loading-bar">
-          <div id="unity-progress-bar-full"></div>
-          <div id="unity-progress-bar-empty"></div>
-          <div id="indicator-percent-cover">
-            <span id="percent-text-cover">0%</span>
-          </div>
-        </div>
-        <span id="branch-cover">Game AMP.XML</span>
-        <span id="version-cover">Mollector ver 2.2.1</span>
-  
-      </div> -->
-      <div id="unity-fullscreen-button" style="display: none;"></div>
-  <div class="wrapper-container">
-    <div class="left-side">
-      <a href="https://docs.mollector.com/about-mollector/introduction" target="_blank" rel="noopener noreferrer" class="image-left guide"></a>
-      <a href="#" target="_blank" rel="noopener noreferrer" class="image-left staking"></a>
-    </div>
-    <div class="game-box">
-    
+
       <div id="loading-cover">
         <div id="unity-loading-bar">
           <div id="unity-progress-bar-full"></div>
@@ -47,17 +40,26 @@
         </div>
         <span id="branch-cover">Game AMP.XML</span>
         <span id="version-cover">Mollector ver 2.2.1</span>
-  
+
       </div>
-      <div id="unity-fullscreen-button" style="display: none;"></div>
+
     </div>
     <div class="right-side">
-      <a href="http://discord.gg/QzBCXBxrcV" target="_blank" rel="noopener noreferrer" class="image-right discord"></a>
-      <a href="http://t.me/MollectorGame" target="_blank" rel="noopener noreferrer" class="image-right tele"></a>
-      <a href="https://www.facebook.com/MollectorGame" target="_blank" rel="noopener noreferrer" class="image-right face"></a>
-      <a href="https://twitter.com/MollectorGame" target="_blank" rel="noopener noreferrer" class="image-right twi"></a>
-      <a href="https://www.youtube.com/c/MollectorOfficial?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="image-right youtube"></a>
+      <div class="right-content">
+        <a href="http://discord.gg/QzBCXBxrcV" target="_blank" rel="noopener noreferrer"
+          class="image-right discord"></a>
+        <a href="http://t.me/MollectorGame" target="_blank" rel="noopener noreferrer" class="image-right tele"></a>
+        <a href="https://www.facebook.com/MollectorGame" target="_blank" rel="noopener noreferrer"
+          class="image-right face"></a>
+        <a href="https://twitter.com/MollectorGame" target="_blank" rel="noopener noreferrer"
+          class="image-right twi"></a>
+        <a href="https://www.youtube.com/c/MollectorOfficial?sub_confirmation=1" target="_blank"
+          rel="noopener noreferrer" class="image-right youtube"></a>
+       
+      </div>
+
     </div>
+    <div id="unity-fullscreen-button" style="display: none;"></div>
   </div>
   <script>
     const hideFullScreenButton = "{{{ HIDE_FULL_SCREEN_BUTTON }}}";
@@ -84,7 +86,6 @@
     var container = document.querySelector("#unity-container");
     var canvas = document.querySelector("#unity-canvas");
     var loadingCover = document.querySelector("#loading-cover");
-    var wrapperContainer = document.querySelector("#wrapper-container");
     var progressBarFull = document.querySelector("#unity-progress-bar-full");
     var fullscreenButton = document.querySelector("#unity-fullscreen-button");
     var percentText = document.querySelector("#percent-text-cover");
@@ -112,18 +113,17 @@
     canvas.style.background = "url('" + buildUrl + "/{{{ BACKGROUND_FILENAME.replace(/'/g, '%27') }}}') center / cover";
     #endif
     loadingCover.style.display = "";
-    loadingCover.style.display = "";
 
     const script = document.createElement("script");
     script.src = loaderUrl;
     script.onload = () => {
       createUnityInstance(canvas, config, (progress) => {
         let value = 100 * progress
+        console.log(config.dataUrl)
         percentText.textContent = parseInt(value) + '%'
         progressBarFull.style.width = value + "%";
       }).then((unityInstance) => {
-        loadingCover.style.display = "none";
-        wrapperContainer.style.display = "none"
+        loadingCover.style.display = "none"
         if (canFullscreen) {
           if (!hideFullScreenButton) {
             fullscreenButton.style.display = "";
