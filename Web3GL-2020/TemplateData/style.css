@@ -21,6 +21,55 @@ body {
   src: url('UTM God_s WordR.ttf'); /*URL to font*/
 }
 
+@media  only screen and (min-width: 1201px){
+  .left-side{
+    width: 30%;
+  }
+  .right-side{
+    width: 30%;
+  
+  }
+  #game-box{
+    width: 40%;
+  }
+}
+
+@media  only screen and (max-width: 1200px){
+  .left-side{
+    width: 25%;
+  }
+  .right-side{
+    width: 25%;
+  
+  }
+  #game-box{
+    width: 50%;
+  }
+}
+@media  only screen and (max-width: 1000px){
+  .left-side{
+    width: 20%;
+  }
+  .right-side{
+    width: 20%;
+  
+  }
+  #game-box{
+    width: 60%;
+  }
+}
+@media  only screen and (max-width: 800px){
+  .left-side{
+    width: 15%;
+  }
+  .right-side{
+    width: 15%;
+  
+  }
+  #game-box{
+    width: 70%;
+  }
+}
 @media only screen and (max-width: 600px){
   .left-side{
       display: none;
@@ -29,7 +78,11 @@ body {
     display: none;
   
   }
+  #game-box{
+    width: 100%;
+  }
 }
+
 
 #wrapper-container {
   position: relative;
@@ -42,8 +95,8 @@ body {
 }
 
 #game-box {
-  width: 40%;
-  min-width: 400px;
+  /* width: 40%; */
+  /* min-width: 400px; */
   /* position: relative; */
   background-color: #041220;
 }
@@ -53,7 +106,7 @@ body {
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
-  width: 30%;
+  /* width: 30%; */
   height: 100%;
   
 }
@@ -65,7 +118,7 @@ body {
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
-  width: 30%;
+  /* width: 30%; */
   height: 100%;
 
 
@@ -184,6 +237,7 @@ body {
 #unity-canvas {
   width: 100%;
   height: 100%;
+
   background: {{{ BACKGROUND_COLOR }}};
 
 }
@@ -208,17 +262,17 @@ body {
 
 #loading-cover {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  max-width: 500px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  /* background-color: #041220; */
-  /* background: url("BG_S1.png") no-repeat center; */
-  /* background-size: auto 100%; */
+   z-index: 0;
 }
 #background-cover {
   position: relative;
