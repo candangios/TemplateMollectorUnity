@@ -124,14 +124,14 @@
         progressBarFull.style.width = value + "%";
       }).then((unityInstance) => {
         loadingCover.style.display = "none"
-        if (canFullscreen) {
-          if (!hideFullScreenButton) {
-            fullscreenButton.style.display = "";
-          }
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }
+        // if (canFullscreen) {
+        //   if (!hideFullScreenButton) {
+        //     fullscreenButton.style.display = "";
+        //   }
+        //   fullscreenButton.onclick = () => {
+        //     unityInstance.SetFullscreen(1);
+        //   };
+        // }
       }).catch((message) => {
         alert(message);
       });

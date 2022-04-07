@@ -99,7 +99,7 @@ body {
   /* min-width: 400px; */
   /* position: relative; */
   background-color: #041220;
-  background: url("BG_S1.png") no-repeat center;
+  background-image: url("BG_S1.png") no-repeat center;
   background-size: auto 100%;
 }
 
