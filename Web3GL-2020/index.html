@@ -23,12 +23,9 @@
         <a href="#" target="_blank" rel="noopener noreferrer" class="image-left staking"></a>
 
       </div>
-
     </div>
-    <div id="game-box">
-      <div id="unity-container" class="unity-desktop">
-        <canvas id="unity-canvas"></canvas>
-      </div>
+    <div id="unity-container" class="game-box-desktop">
+      <canvas id="unity-canvas"></canvas>
       <div id="loading-cover">
         <div id="unity-loading-bar">
           <div id="unity-progress-bar-full"></div>
@@ -106,7 +103,7 @@
     }());
 
     if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-      container.className = "unity-mobile";
+      container.className = "game-box-mobile";
       config.devicePixelRatio = 1;
     }
     #if BACKGROUND_FILENAME
@@ -124,14 +121,6 @@
         progressBarFull.style.width = value + "%";
       }).then((unityInstance) => {
         loadingCover.style.display = "none"
-        // if (canFullscreen) {
-        //   if (!hideFullScreenButton) {
-        //     fullscreenButton.style.display = "";
-        //   }
-        //   fullscreenButton.onclick = () => {
-        //     unityInstance.SetFullscreen(1);
-        //   };
-        // }
       }).catch((message) => {
         alert(message);
       });

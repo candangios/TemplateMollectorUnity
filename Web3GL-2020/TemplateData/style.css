@@ -14,6 +14,8 @@ canvas {
 body {
   /* padding: 0; */
   margin: 0;
+   background-color: #040F1B;
+
 }
 
 @font-face {
@@ -21,55 +23,7 @@ body {
   src: url('UTM God_s WordR.ttf'); /*URL to font*/
 }
 
-@media  only screen and (min-width: 1201px){
-  .left-side{
-    width: 30%;
-  }
-  .right-side{
-    width: 30%;
-  
-  }
-  #game-box{
-    width: 40%;
-  }
-}
 
-@media  only screen and (max-width: 1200px){
-  .left-side{
-    width: 25%;
-  }
-  .right-side{
-    width: 25%;
-  
-  }
-  #game-box{
-    width: 50%;
-  }
-}
-@media  only screen and (max-width: 1000px){
-  .left-side{
-    width: 20%;
-  }
-  .right-side{
-    width: 20%;
-  
-  }
-  #game-box{
-    width: 60%;
-  }
-}
-@media  only screen and (max-width: 800px){
-  .left-side{
-    width: 15%;
-  }
-  .right-side{
-    width: 15%;
-  
-  }
-  #game-box{
-    width: 70%;
-  }
-}
 @media only screen and (max-width: 600px){
   .left-side{
       display: none;
@@ -78,10 +32,8 @@ body {
     display: none;
   
   }
-  #game-box{
-    width: 100%;
-  }
-}
+ 
+} 
 
 
 #wrapper-container {
@@ -91,18 +43,25 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  background-color: #041220;
+  justify-content: center;
+  align-items: center;
 }
 
-#game-box {
-  /* width: 40%; */
-  /* min-width: 400px; */
-  /* position: relative; */
+.game-box-desktop{
   background-image: url(./BG_S1.png) ;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* background-size: auto 100%; */
+  width: 75vh;
+  height: 100%;
+}
+.game-box-mobile{
+  background-image: url(./BG_S1.png) ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .left-side {
@@ -110,9 +69,8 @@ body {
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
-  /* width: 30%; */
-  height: 100%;
-  
+  height: 100%; 
+  flex: 1;
 }
 
 
@@ -122,12 +80,13 @@ body {
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
-  /* width: 30%; */
   height: 100%;
+  flex: 1;
 
 
 }
 .left-content{
+  position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
@@ -135,6 +94,8 @@ body {
   align-items: flex-start;
 }
 .right-content{
+  position: absolute;
+  right: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -232,36 +193,9 @@ body {
   transform: scale(1.4);
 }
 
-#unity-container {
-  font-family: 'MollectorFont';
-  width: 100%;
-  height: 100%;
-}
-
 #unity-canvas {
   width: 100%;
   height: 100%;
-
-  background: {{{ BACKGROUND_COLOR }}};
-
-}
-
-#unity-webgl-logo {
-  float: left;
-  width: 204px;
-  height: 38px;
-  background: url("webgl-logo.png") no-repeat center;
-}
-
-#unity-fullscreen-button {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  width: 38px;
-  height: 38px;
-  background: url('fullscreen-button.png') no-repeat center;
-  background-size: contain;
-  z-index: 1000;
 }
 
 #loading-cover {
@@ -270,64 +204,14 @@ body {
   left:50%;
   transform: translate(-50%,-50%);
   max-width: 500px;
-  width: 100%;
+  width: 75vh;
+  max-width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
    z-index: 0;
-}
-#background-cover {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  max-width: 504px;
-  background: url("BG_S1.png") no-repeat center;
-  background-size: 'auto';
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-}
-#content-cover {
-  /* position: relative; */
-  width: 90%;
-  height: 446px;
-  background: url("plateGuide2x.png") no-repeat center;
-  background-size: 100% 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#line-cover {
-  width: 90%;
-}
-#header-cover
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 15%;
-  width: 100%;
-}
-
-#title-cover {
-  margin-top: 6px ;
-  font-size: 34px;
-  color: rgb(242, 185, 32);
-  text-align: center;
- 
-
-}
-#tips-cover {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  font-size: 18px;
-  color: rgb(231, 226, 194);
-  line-height: 22pt;
-  text-align: center;
-  width: 390px;
 }
 #branch-cover{
   margin-top: 10px;
@@ -356,11 +240,10 @@ body {
 }
 #indicator-percent-cover{
   position:absolute;
-  top: 10px;
+  top: 11.5px;
   right: 0;
   width: 37px;
   height: 33px;
- 
   background: url("indicatorPercentPlate.png") no-repeat center;
   background-size: 100% 100%;
   display: flex;
@@ -385,5 +268,5 @@ body {
   position: relative;
   width: 90%;
   max-width: 504px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
